@@ -1,0 +1,5 @@
+# Default launch profile "http" — only this port is listening unless you run with --launch-profile https
+@ComplianceManager.Api_HostAddress = http://localhost:5143
+
+GET {{ComplianceManager.Api_HostAddress}}/api/health
+Accept: application/json
