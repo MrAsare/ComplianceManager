@@ -1,5 +1,14 @@
 # Default launch profile "http" — only this port is listening unless you run with --launch-profile https
-@ComplianceManager.Api_HostAddress = http://localhost:5143
+@host = http://localhost:5143
 
-GET {{ComplianceManager.Api_HostAddress}}/api/health
+###
+POST {{host}}/api/Obligations
+Content-Type: application/json
+
+{
+  "title": "File annual return",
+  "dueOn": "2026-12-01"
+}
+###
+GET {{host}}/api/Obligations
 Accept: application/json
