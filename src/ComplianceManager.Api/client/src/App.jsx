@@ -45,7 +45,7 @@ function App() {
       <ul>
         {obligations.map((obligation) => (
           <li key={obligation.id}>
-            {obligation.title} — {obligation.dueOn.slice(0, 10)}
+            {obligation.title} — {obligation.dueOn.slice(0, 10)}  — {obligation.isComplete ? 'Complete' : 'Open'}
           </li>
         ))}
       </ul>
